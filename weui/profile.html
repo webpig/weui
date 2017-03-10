@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>WeUI 用户中心</title>
+  <style>
+  /*css reset*/
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    html {
+      /*不要放大字体*/
+      -webkit-text-size-adjust: 100%;
+    }
+    body {
+      line-height: 1.6;
+      font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    }
+    /*cell  组件样式*/
+    .weui_cells {
+      /*px不靠谱 手机的密度不一样*/
+      margin-top: 1.17647059em;
+      background: #fff;
+      line-height: 1.41176471;
+      font-size: 17px;
+      overflow: hidden;
+      position: relative;
+    }
+    .weui_cells:after, .weui_cells:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      color: #d9d9d9;
+    }
+    .weui_cells:after {
+      border-top: 1px solid #d9d9d9;
+      top: 0;
+      transform: scaleY(.5);
+      transform-origin: 0 0;
+    }
+    .weui_cell {
+      padding: 10px 15px;
+      position: relative;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+    }
+    .weui_cell:not(.no_access):active {
+      background-color: #ececec;
+    }
+    .weui_cell_primary {
+      -webkit-flex: 1;
+      flex: 1;
+    }
+    .weui_cell_ft {
+      text-align: right;
+      color: #888;
+    }
+    .weui_cell_ft:after {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-width: 2px 2px 0 0;
+      transform: rotate(45deg);
+      border-color: #c8c8cd;
+      border-style: solid;
+      margin-left: .3em;
+      top: -1px;
+      position: relative;
+    }
+    .weui_avatar {
+      width: 52px;
+      height: 52px;
+      -webkit-border-radius: 4px;
+      border-radius: 4px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body ontouchstart>
+  <div id="container">
+    <div class="profile">
+      <div class="weui_cells weui_cells_access">
+        <div class="weui_cell">
+          <div class="weui_cell_bd weui_cell_primary">
+            <p>头像</p>
+          </div>
+          <div class="weui_cell_ft">
+            <img src="https://team.weui.io/avatar/bear.jpg" alt="" class="weui_avatar">
+          </div>
+        </div>
+        <div class="weui_cell">
+          <div class="weui_cell_bd weui_cell_primary">
+            <p>姓名</p>
+          </div>
+          <div class="weui_cell_ft">bear</div>
+        </div>
+        <div class="weui_cell no_access">
+          <div class="weui_cell_bd weui_cell_primary">
+            <p>微信号</p>
+          </div>
+          <div class="weui_cell_ft">102140830</div>
+        </div>
+        <div class="weui_cell">
+          <div class="weui_cell_bd weui_cell_primary">
+            <p>我的二维码</p>
+          </div>
+          <div class="weui_cell_ft"></div>
+        </div>
+        <div class="weui_cell">
+          <div class="weui_cell_bd weui_cell_primary">
+            <p>我的地址</p>
+          </div>
+          <div class="weui_cell_ft">研一737</div>
+        </div>
+      </div>
+      <div class="weui_cells weui_cells_access">
+        <div class="weui_cell">
+          <div class="weui_cell_bd weui_cell_primary">
+            <p>性别</p>
+          </div>
+          <div class="weui_cell_ft">男</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
